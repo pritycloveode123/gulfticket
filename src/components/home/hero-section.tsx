@@ -24,56 +24,52 @@ const HeroCarousel = () => {
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    resetAutoPlay();
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
+    resetAutoPlay();
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+    resetAutoPlay();
+  };
+
+  const resetAutoPlay = () => {
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 10000);
   };
 
   return (
     <div className="relative w-full h-[350px] overflow-hidden">
-      {/* Slide Track */}
-      <div
-        className="flex transition-transform duration-500 ease-in-out h-full"
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
-        {slides.map((slide) => (
-          <div key={slide.id} className="min-w-full h-full">
-            <img
-              src={slide.image}
-              alt={`Slide ${slide.id}`}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))}
-      </div>
+      {/* Slide Images (with fade effect) */}
+      {slides.map((slide, index) => (
+        <img
+          key={slide.id}
+          src={slide.image}
+          alt={`Slide ${slide.id}`}
+          className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+        />
+      ))}
 
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 text-white p-3 rounded-full transition-all duration-300"
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition-all duration-300 z-20"
       >
         <ChevronLeft size={34} />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2  text-white p-3 rounded-full transition-all duration-300"
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition-all duration-300 z-20"
       >
         <ChevronRight size={34} />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
