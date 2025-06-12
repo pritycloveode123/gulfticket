@@ -61,9 +61,9 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-96 overflow-hidden rounded-2xl shadow-2xl">
+    <div className="relative w-full h-96 overflow-hidden">
       {/* Main Carousel Container */}
-      <div 
+      <div
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
@@ -89,25 +89,25 @@ const HeroCarousel = () => {
                   $
                 </div>
               ))}
-              
+
               {/* Billiard Balls */}
               <div className="absolute left-12 top-16 w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-xl animate-pulse">
                 <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center text-white font-bold">
                   8
                 </div>
               </div>
-              
-              <div className="absolute left-32 top-32 w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full shadow-xl animate-pulse" 
-                   style={{ animationDelay: '1s' }}></div>
-              
+
+              <div className="absolute left-32 top-32 w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-full shadow-xl animate-pulse"
+                style={{ animationDelay: '1s' }}></div>
+
               <div className="absolute left-20 top-48 w-18 h-18 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center shadow-xl animate-pulse text-white font-bold"
-                   style={{ animationDelay: '2s' }}>
+                style={{ animationDelay: '2s' }}>
                 4
               </div>
-              
+
               {/* Decorative Elements */}
-              <div className="absolute right-20 top-12 w-6 h-6 bg-yellow-400 transform rotate-45 animate-spin" 
-                   style={{ animationDuration: '4s' }}></div>
+              <div className="absolute right-20 top-12 w-6 h-6 bg-yellow-400 transform rotate-45 animate-spin"
+                style={{ animationDuration: '4s' }}></div>
               <div className="absolute right-32 top-40 w-4 h-4 bg-white transform rotate-45 animate-ping"></div>
             </div>
 
@@ -150,7 +150,7 @@ const HeroCarousel = () => {
                     {/* Hair */}
                     <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-36 h-16 bg-gradient-to-b from-amber-900 to-amber-700 rounded-full"></div>
                   </div>
-                  
+
                   {/* Money Fan */}
                   <div className="absolute right-4 top-12 transform rotate-12">
                     {[...Array(5)].map((_, i) => (
@@ -180,7 +180,7 @@ const HeroCarousel = () => {
       >
         <ChevronLeft size={24} />
       </button>
-      
+
       <button
         onClick={nextSlide}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition-all duration-300 backdrop-blur-sm"
@@ -194,18 +194,17 @@ const HeroCarousel = () => {
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              index === currentSlide
-                ? 'bg-white shadow-lg scale-125'
-                : 'bg-white/50 hover:bg-white/70'
-            }`}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+              ? 'bg-white shadow-lg scale-125'
+              : 'bg-white/50 hover:bg-white/70'
+              }`}
           />
         ))}
       </div>
 
       {/* Progress Bar */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-black/20">
-        <div 
+        <div
           className="h-full bg-gradient-to-r from-yellow-400 to-orange-500 transition-all duration-300"
           style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
         />
