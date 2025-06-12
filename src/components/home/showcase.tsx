@@ -36,7 +36,6 @@ export default function GulfTicketShowcase() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    // Duplicate start & end for infinite loop illusion
     const extendedCards = [
         ...cardsData.slice(-2),
         ...cardsData,
@@ -53,16 +52,14 @@ export default function GulfTicketShowcase() {
         return () => clearInterval(interval);
     }, []);
 
-    // Reset to start after full loop
     useEffect(() => {
         if (currentIndex === cardsData.length + 1) {
             setTimeout(() => {
-                // Reset without animation
                 if (containerRef.current) {
                     containerRef.current.style.transition = 'none';
                     setCurrentIndex(1);
                 }
-            }, 600); // Wait for transition to end
+            }, 600);
         } else {
             if (containerRef.current) {
                 containerRef.current.style.transition = 'transform 0.6s ease-in-out';
@@ -71,7 +68,7 @@ export default function GulfTicketShowcase() {
     }, [currentIndex]);
 
     return (
-        <div className="bg-gradient-to-b from-gray-100 to-white  text-center  py-12">
+        <div className="bg-gradient-to-b from-gray-100 to-white text-center py-12">
             <h4 className="text-lg font-semibold text-[#DF911A] mb-2">
                 REASONS WHY THAI PLAYERS TRUST GULF TICKET
             </h4>
@@ -91,20 +88,20 @@ export default function GulfTicketShowcase() {
                         {extendedCards.map((card, i) => (
                             <div
                                 key={i}
-                                className="w-1/3 flex-shrink-0 px-4"
+                                className="w-1/3 flex-shrink-0 px-6"
                             >
-                                <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-full relative">
+                                <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-[450px] relative">
                                     <Image
                                         src={card.image}
                                         alt="Player"
                                         width={160}
                                         height={160}
-                                        className="h-64 w-62 object-cover  mb-4"
+                                        className="h-40 w-40 object-cover mb-4"
                                     />
-                                    <p className="mt-6 text-sm font-semibold text-gray-800">
+                                    <p className="mt-6 text-sm font-semibold text-gray-800 mb-4 px-1 text-center">
                                         {card.text}
                                     </p>
-                                    <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
+                                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
                                         <DynamicButton text="BUY NOW !" size="sm" />
                                     </div>
                                 </div>
