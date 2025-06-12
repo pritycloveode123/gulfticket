@@ -2,13 +2,16 @@ import DynamicButton from "../common/button";
 
 export default function GulfTicketBanner() {
     return (
-        <div className="w-full bg-gray-100 py-12 ">
+        <div
+            className="w-full bg-cover bg-center bg-no-repeat py-12"
+            style={{ backgroundImage: "url('/bg2.jpg')" }} // Replace with your actual image path
+        >
 
 
             <div className="container mx-auto text-center">
                 {/* Main heading */}
                 <h1 className="text-[2rem]  font-bold text-[#E99F00] mb-6 tracking-wide">
-                    GULF TICKET – THAILAND'S TRUSTED ONLINE LOTTERY PLATFORM
+                    GULF TICKET – THAILAND&apos;S TRUSTED ONLINE LOTTERY PLATFORM
                 </h1>
 
                 {/* First paragraph */}

@@ -2,8 +2,6 @@ export default function GulfTicketGamesSection() {
     return (
         <div className="w-full bg-gray-100 py-16 px-4">
 
-            <div className="w-full h-1 bg-[#DF911A] mb-12"></div>
-
             <div className="max-w-5xl mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-8">
@@ -83,7 +81,7 @@ export default function GulfTicketGamesSection() {
                         To support players in Thailand, Gulf Ticket has designed a system specifically for Thais, supporting full mobile access, with a Thai language menu, and easy-to-use domestic payment channels such as TrueMoney Wallet, PromptPay, SCB, Krung Thai, and Bangkok Bank.
                     </p>
                     <p>Whether you prefer a fast-paced thrill or wait for the weekly jackpot, Gulf Ticket has a full range of lottery games to choose from, with real money prizes and a transparent display system that allows you to check every draw.</p>
-                    <p>In addition, Gulf Ticket is committed to developing a sustainable society, inspired by the ideas of His Highness Sheikh Mohammed bin Rashid Al Maktoum, the UAE's leader, who prioritizes the happiness of his people, the environment and the future of society.
+                    <p>In addition, Gulf Ticket is committed to developing a sustainable society, inspired by the ideas of His Highness Sheikh Mohammed bin Rashid Al Maktoum, the UAE&apos;s leader, who prioritizes the happiness of his people, the environment and the future of society.
                     </p>
                     <p>One of the projects that reflects our commitment is the Palm Tree Plantation Project, which uses a portion of the proceeds from lottery sales to plant trees, increase green spaces and promote sustainability in the region.</p>
                     <p>We believe that “Every Lottery Ticket is Hope”, not just a chance to win, but an opportunity to change lives, inspire and spread positive energy to both players and the community. Gulf Ticket is not just an entertainment platform, but a bridge to a better future for everyone.</p>

@@ -3,7 +3,7 @@ import React from 'react';
 const GulfTicketThailand = () => {
     return (
         <div className=" bg-gray-100 ">
-            <div className="mx-auto">
+            <div className="container mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-8">
                     <h1 className="text-[#DF911A] text-sm sm:text-base font-semibold tracking-wider uppercase mb-2">
@@ -15,7 +15,7 @@ const GulfTicketThailand = () => {
                 </div>
 
                 {/* Games Table */}
-                <div className="bg-white  shadow-lg overflow-hidden text-center mb-12">
+                <div className="bg-white  container mx-auto shadow-lg overflow-hidden text-center mb-12">
                     <div className="overflow-x-auto">
                         <table className="w-full border-collapse">
                             <thead>

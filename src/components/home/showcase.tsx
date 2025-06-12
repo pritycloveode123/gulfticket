@@ -71,7 +71,7 @@ export default function GulfTicketShowcase() {
     }, [currentIndex]);
 
     return (
-        <div className="bg-gradient-to-b from-gray-100 to-white  text-center overflow-hidden">
+        <div className="bg-gradient-to-b from-gray-100 to-white  text-center  py-12">
             <h4 className="text-lg font-semibold text-[#DF911A] mb-2">
                 REASONS WHY THAI PLAYERS TRUST GULF TICKET
             </h4>
@@ -79,7 +79,7 @@ export default function GulfTicketShowcase() {
                 GET INSTANT HOURLY REWARDS WITH GULFTICKET
             </h2>
 
-            <div className="max-w-6xl mx-auto px-4 overflow-hidden">
+            <div className="container mx-auto px-4 overflow-hidden">
                 <div className="relative w-full">
                     <div
                         ref={containerRef}

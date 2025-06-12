@@ -5,6 +5,7 @@ import GulfTicketGamesSection from "@/components/home/games-section";
 import GulfTicketAppSection from "@/components/home/GulfTicketAppSection";
 import HeroCarousel from "@/components/home/hero-section";
 import GulfTicketThailand from "@/components/home/popular-games";
+import StatsBanner from "@/components/home/promotions";
 import GulfTicketRewarded from "@/components/home/rewarded";
 import GulfTicketShowcase from "@/components/home/showcase";
 
@@ -14,6 +15,7 @@ export default function Home() {
     <>
       <HeroCarousel />
       <GulfTicketBanner />
+      <StatsBanner />
       <GulfTicketGamesSection />
       <GulfTicketShowcase />
       <GulfTicketThailand />
