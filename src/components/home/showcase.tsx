@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
+import DynamicButton from '../common/button';
 
 const cardsData = [
     {
@@ -42,7 +43,7 @@ export default function GulfTicketShowcase() {
         ...cardsData.slice(0, 2),
     ];
 
-    const slideWidth = 100 / 3; // % width for 3 cards
+    const slideWidth = 100 / 3;
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -78,11 +79,11 @@ export default function GulfTicketShowcase() {
                 GET INSTANT HOURLY REWARDS WITH GULFTICKET
             </h2>
 
-            <div className="max-w-5xl mx-auto px-4 overflow-hidden">
+            <div className="max-w-6xl mx-auto px-4 overflow-hidden">
                 <div className="relative w-full">
                     <div
                         ref={containerRef}
-                        className="flex w-[calc(35%*9/3)]"
+                        className="flex w-[calc(35%*8.5/3)]"
                         style={{
                             transform: `translateX(-${currentIndex * slideWidth}%)`,
                         }}
@@ -90,7 +91,7 @@ export default function GulfTicketShowcase() {
                         {extendedCards.map((card, i) => (
                             <div
                                 key={i}
-                                className="w-1/3 flex-shrink-0 px-2"
+                                className="w-1/3 flex-shrink-0 px-4"
                             >
                                 <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-full relative">
                                     <Image
@@ -104,9 +105,7 @@ export default function GulfTicketShowcase() {
                                         {card.text}
                                     </p>
                                     <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                                        <button className="bg-yellow-400 text-white font-bold text-sm px-6 py-2 rounded-md shadow-md border-2 border-white hover:brightness-110 transition">
-                                            BET NOW!
-                                        </button>
+                                        <DynamicButton text="BUY NOW !" size="sm" />
                                     </div>
                                 </div>
                             </div>
