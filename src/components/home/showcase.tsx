@@ -69,7 +69,7 @@ export default function GulfTicketShowcase() {
 
     return (
         <div className="bg-gradient-to-b from-gray-100 to-white text-center py-12">
-            <h4 className="text-lg font-semibold text-[#DF911A] mb-2">
+            <h4 className="text-2xl font-semibold text-[#DF911A] mb-2">
                 REASONS WHY THAI PLAYERS TRUST GULF TICKET
             </h4>
             <h2 className="text-3xl font-bold text-[#DF911A] mb-10">

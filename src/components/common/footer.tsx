@@ -25,8 +25,8 @@ const Footer = () => {
           <nav className="flex flex-wrap justify-center items-center space-x-1 text-sm">
             <Link
               href="/"
-              className="text-orange-500 hover:text-orange-400 transition-colors px-3 py-1"
-              style={{ color: '#DF911A' }}
+              className="text-white hover:text-orange-400 transition-colors px-3 py-1"
+
             >
               HOUSE
             </Link>
@@ -34,6 +34,13 @@ const Footer = () => {
             <Link
               href="#"
 
+              className="text-white hover:text-orange-400 transition-colors px-3 py-1"
+            >
+              ABOUT US
+            </Link>
+            <span className="text-gray-500">|</span>
+            <Link
+              href="#"
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
             >
               HOW TO PLAY
@@ -50,22 +57,10 @@ const Footer = () => {
               href="#"
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
             >
-              ABOUT US
+              FAQ&apos;s
             </Link>
             <span className="text-gray-500">|</span>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-400 transition-colors px-3 py-1"
-            >
-              PRIVACY POLICY
-            </Link>
-            <span className="text-gray-500">|</span>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-400 transition-colors px-3 py-1"
-            >
-              SITE MAP
-            </Link>
+
           </nav>
         </div>
 

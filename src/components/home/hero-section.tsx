@@ -43,8 +43,8 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[350px] overflow-hidden">
-      {/* Slide Images (with fade effect) */}
+    <div className="relative w-full h-[200px] sm:h-[300px] md:h-[350px] overflow-hidden">
+      {/* Slides */}
       {slides.map((slide, index) => (
         <img
           key={slide.id}
@@ -57,24 +57,24 @@ const HeroCarousel = () => {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition-all duration-300 z-20"
+        className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white p-2 sm:p-3 bg-black/30 hover:bg-black/50 rounded-full z-20"
       >
-        <ChevronLeft size={34} />
+        <ChevronLeft size={24} className="sm:size-8" />
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white p-3 rounded-full transition-all duration-300 z-20"
+        className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white p-2 sm:p-3 bg-black/30 hover:bg-black/50 rounded-full z-20"
       >
-        <ChevronRight size={34} />
+        <ChevronRight size={24} className="sm:size-8" />
       </button>
 
-      {/* Dot Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      {/* Dots */}
+      <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${index === currentSlide
+            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentSlide
               ? "bg-white shadow-lg scale-125"
               : "bg-white/50 hover:bg-white/70"
               }`}

@@ -2,11 +2,11 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import Link from 'next/link';
 
 type DynamicButtonProps = {
     text: string;
     size?: 'sm' | 'md' | 'lg';
-    onClick?: () => void;
 };
 
 const sizeClasses = {
@@ -15,18 +15,18 @@ const sizeClasses = {
     lg: 'text-lg py-4 px-8',
 };
 
-const DynamicButton: React.FC<DynamicButtonProps> = ({ text, size = 'md', onClick }) => {
+const DynamicButton: React.FC<DynamicButtonProps> = ({ text, size = 'md' }) => {
     return (
-        <button
-            onClick={onClick}
+        <Link
+            href="https://gulfticket.com/Register"
             className={clsx(
-                'font-bold text-white rounded-md shadow-md transition-all duration-300',
+                'inline-block font-bold text-white rounded-md shadow-md transition-all duration-300 text-center',
                 sizeClasses[size],
                 'bg-gradient-to-b from-[#FFD600] to-[#E99F00] hover:from-[#E99F00] hover:to-[#FFD600]'
             )}
         >
             {text}
-        </button>
+        </Link>
     );
 };
 

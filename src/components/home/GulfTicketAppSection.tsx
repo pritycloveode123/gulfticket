@@ -5,7 +5,7 @@ import DynamicButton from '../common/button';
 
 const GulfTicketAppSection = () => {
     return (
-        <div className="bg-gradient-to-r from-[#dce1ea] to-[#e4ecf3] py-12 px-6 text-[#000]">
+        <div className="bg-gradient-to-r from-[#dce1ea] to-[#e4ecf3] py-12 px-6 text-[#000]" id="gulfticket-app">
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch relative">
                 {/* Vertical Dotted Line */}
                 <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dotted border-gray-400 transform -translate-x-1/2"></div>
