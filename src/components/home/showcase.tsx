@@ -80,7 +80,7 @@ export default function GulfTicketShowcase() {
                 <div className="relative w-full">
                     <div
                         ref={containerRef}
-                        className="flex w-[calc(35%*8.5/3)]"
+                        className="flex md:w-[calc(35%*8.5/3)] w-full"
                         style={{
                             transform: `translateX(-${currentIndex * slideWidth}%)`,
                         }}
@@ -88,9 +88,9 @@ export default function GulfTicketShowcase() {
                         {extendedCards.map((card, i) => (
                             <div
                                 key={i}
-                                className="w-1/3 flex-shrink-0 px-6"
+                                className="md:w-1/3 w-full flex-shrink-0 px-4"
                             >
-                                <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-[450px] relative">
+                                <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-full min-h-[450px] relative">
                                     <Image
                                         src={card.image}
                                         alt="Player"

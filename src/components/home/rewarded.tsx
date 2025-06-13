@@ -1,5 +1,30 @@
 import Image from 'next/image';
+import { Gift, UserPlus, RotateCcw, BadgePercent } from 'lucide-react';
 import DynamicButton from '../common/button';
+
+const steps = [
+    {
+        icon: Gift,
+        title: 'Free Card for New Players',
+        desc: 'Get free lucky draw tickets instantly when you make your first deposit.',
+    },
+    {
+        icon: UserPlus,
+        title: 'Refer a friend, get a bonus',
+        desc: 'Invite friends to play and get a 10% credit bonus from their first ticket purchase.',
+    },
+    {
+        icon: RotateCcw,
+        title: 'Weekly Cashback',
+        desc: 'Up to 15% cashback on non-winning tickets',
+    },
+    {
+        icon: BadgePercent,
+        title: 'Discount when buying multiple tickets',
+        desc: 'Buy a package of tickets in advance (3, 5 or 10 tickets) and receive a discount of up to 20%.',
+    }
+];
+
 const cardData = [
     { id: 1, title: 'Lucky1 Daily Draw', img: '/Homepage-Promo-1.jpg' },
     { id: 2, title: 'Rach3 Daily Draw', img: '/Homepage-Promo-2.jpg' },
@@ -9,103 +34,62 @@ const cardData = [
 
 export default function GulfTicketRewarded() {
     return (
-        <>
-            <div className=" bg-white py-12 ">
-                <div className='container mx-auto '>
-                    <div className="text-center mb-8">
-                        <h1 className="text-[#DF911A] text-sm sm:text-base font-semibold tracking-wider uppercase mb-2">
-                            Get rewarded
-                        </h1>
-                        <h2 className="text-[#DF911A] text-3xl  font-bold uppercase">
-                            Promotions for Thai players
-                        </h2>
-                    </div>
+        <div className="bg-white py-12">
+            <div className="container mx-auto px-6">
 
-                    <div className="space-y-2 text-black ">
-                        {/* Step 1 */}
-                        <div className="text-center">
-                            <h5 className="font-semibold  mb-2 text-sm sm:text-base">
-                                Step 1: Sign up for free
-                            </h5>
-                            <p className="text-sm sm:text-base leading-relaxed">
-                                Register with your mobile number and email. Quickly verify your identity with OTP code for account security.
-                            </p>
-                        </div>
-
-                        {/* Step 2 */}
-                        <div className="text-center">
-                            <h5 className="font-semibold mb-2 text-sm sm:text-base">
-                                Step 2: Choose a game to play.
-                            </h5>
-                            <p className="text-sm sm:text-base leading-relaxed">
-                                View the draw table and winning rates of each game. Choose a game that suits your playing style.
-                            </p>
-                        </div>
-
-                        {/* Step 3 */}
-                        <div className="text-center">
-                            <h5 className="font-semibold mb-2 text-sm sm:text-base">
-                                Step 3: Choose your numbers.
-                            </h5>
-                            <p className="text-sm sm:text-base leading-relaxed">
-                                Choose your own numbers or use the Auto-Pick system.
-                            </p>
-                        </div>
-
-                        {/* Step 4 */}
-                        <div className="text-center">
-                            <h5 className="font-semibold  mb-2 text-sm sm:text-base">
-                                Step 4: Pay securely with Thai Baht (THB).
-                            </h5>
-                            <p className="text-sm sm:text-base leading-relaxed">
-                                Choose popular Thai payment channels such as TrueMoney, PromptPay, SCB and more.
-                            </p>
-                        </div>
-
-                        {/* Step 5 */}
-                        <div className="text-center">
-                            <h5 className="font-semibold  mb-2 text-sm sm:text-base">
-                                Step 5: Watch the Live Draw & Notify Winners
-                            </h5>
-                            <p className="text-sm sm:text-base leading-relaxed">
-                                The system will notify the winners via SMS, email and LINE. You can also watch the live draw on our website or YouTube.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    {/* image section  stated from here */}
-
-                    <div className="w-full mt-6">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            {cardData.map((card) => (
-                                <div
-                                    key={card.id}
-                                    className="bg-white rounded-lg border border-[#DF911A] overflow-hidden transition-shadow hover:shadow-[0_-4px_8px_0_rgba(223,145,26,0.4),4px_0_8px_0_rgba(223,145,26,0.4),-4px_0_8px_0_rgba(223,145,26,0.4)]"
-                                >
-                                    {/* Image */}
-                                    < div className="relative" >
-                                        <Image
-                                            src={card.img}
-                                            alt={card.title}
-                                            width={949}
-                                            height={512}
-                                            className="w-full object-cover p-4"
-                                        />
-                                    </div>
-
-                                    {/* Text + Button */}
-                                    <div className=" items-center px-4 py-4">
-                                        <h3 className="text-lg font-bold text-gray-800">{card.title}</h3>
-                                        <DynamicButton text="register" size="sm" />
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div >
+                {/* Top Headings */}
+                <div className="text-center mb-12">
+                    <h1 className="text-[#DF911A] text-sm sm:text-base font-semibold tracking-wider uppercase mb-2">
+                        Get rewarded
+                    </h1>
+                    <h2 className="text-[#DF911A] text-3xl font-bold uppercase">
+                        Promotions for Thai players
+                    </h2>
                 </div>
-            </div >
 
-        </>
+                {/* Step Cards with Icons */}
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    {steps.map(({ icon: Icon, title, desc }, index) => (
+                        <div
+                            key={index}
+                            className="bg-white border border-[#DF911A] rounded-xl p-4 text-center shadow-sm hover:shadow-[0_4px_20px_rgba(223,145,26,0.3)] transition duration-300"
+                        >
+                            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#DF911A] text-white flex items-center justify-center">
+                                <Icon className="w-6 h-6" />
+                            </div>
+                            <h5 className="font-semibold text-lg text-gray-800 mb-2">{title}</h5>
+                            <p className="text-sm text-gray-600 leading-relaxed">{desc}</p>
+                        </div>
+                    ))}
+                </section>
+
+                {/* Promo Cards */}
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    {cardData.map((card) => (
+                        <div
+                            key={card.id}
+                            className="bg-white rounded-lg border border-[#DF911A] overflow-hidden transition-shadow hover:shadow-[0_-4px_8px_0_rgba(223,145,26,0.4),4px_0_8px_0_rgba(223,145,26,0.4),-4px_0_8px_0_rgba(223,145,26,0.4)]"
+                        >
+                            {/* Image */}
+                            <div className="relative">
+                                <Image
+                                    src={card.img}
+                                    alt={card.title}
+                                    width={949}
+                                    height={512}
+                                    className="w-full object-cover py-4"
+                                />
+                            </div>
+
+                            <div className="px-4 pb-4">
+                                <h3 className="text-lg font-bold text-gray-800 mb-2">{card.title}</h3>
+                                <DynamicButton text="Register" size="sm" />
+                            </div>
+                        </div>
+                    ))}
+                </section>
+
+            </div>
+        </div>
     );
 }
