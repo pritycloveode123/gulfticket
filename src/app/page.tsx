@@ -10,6 +10,7 @@ import GulfTicketRewarded from "@/components/home/rewarded";
 import GulfTicketShowcase from "@/components/home/showcase";
 
 
+
 export default function Home() {
   return (
     <>
@@ -29,22 +30,23 @@ export default function Home() {
         buttonText="Start winning"
         imagePosition="right"
       />
-      <FaqSection />
+
       <ImageContentSection
         imageSrc="/winner2.jpg"
         subtitle="KEEP YOUR ACCOUNT SECURE WITH US"
         title="SECURITY YOU CAN TRUST"
-        description={`1 Transactions are encrypted with SSL.
-2 Two-Factor Authentication (2FA)
-3 Real-time risk monitoring and fraud prevention
-4 KYC system to verify identity before withdrawing money, increasing security
-5 Support team in both Thai and English are ready to help you every step of the way.`}
-        buttonText="Start winning"
         imagePosition="left"
+        buttonText="Start winning"
+        description={
+          <ul className="list-disc list-inside space-y-2 text-left">
+            <li>Transactions are encrypted with SSL.</li>
+            <li>Two-Factor Authentication (2FA)</li>
+            <li>Real-time risk monitoring and fraud prevention</li>
+            <li>KYC system to verify identity before withdrawing money</li>
+            <li>Support team in both Thai and English are ready to help you</li>
+          </ul>
+        }
       />
-
-      <GulfTicketAppSection />
-
       <ImageContentSection
         imageSrc="/winner3.png"
         subtitle="Download the app"
@@ -55,6 +57,9 @@ Sign up today, choose your lucky number and let Gulf Ticket Thailand be your new
         buttonText="Join us"
         imagePosition="right"
       />
+      <GulfTicketAppSection />
+      <FaqSection />
+
 
     </>
   );
