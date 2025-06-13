@@ -34,12 +34,12 @@ const cardData = [
 
 export default function GulfTicketRewarded() {
     return (
-        <div className="bg-white py-12">
+        <div className="bg-white py-12" id='promotion'>
             <div className="container mx-auto px-6">
 
                 {/* Top Headings */}
                 <div className="text-center mb-12">
-                    <h1 className="text-[#DF911A] text-sm sm:text-base font-semibold tracking-wider uppercase mb-2">
+                    <h1 className="text-[#DF911A] text-2xl font-bold tracking-wider uppercase mb-2">
                         Get rewarded
                     </h1>
                     <h2 className="text-[#DF911A] text-3xl font-bold uppercase">
@@ -48,7 +48,7 @@ export default function GulfTicketRewarded() {
                 </div>
 
                 {/* Step Cards with Icons */}
-                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                     {steps.map(({ icon: Icon, title, desc }, index) => (
                         <div
                             key={index}

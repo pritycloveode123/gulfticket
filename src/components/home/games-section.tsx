@@ -1,7 +1,10 @@
 "use client";
+
+import Link from "next/link";
+
 export default function GulfTicketGamesSection() {
     return (
-        <div className="w-full bg-gray-100 py-16 px-6">
+        <div className="w-full bg-gray-100 py-16 px-6 " id="about-us">
             <div className="container mx-auto">
                 {/* Header Section */}
                 <div className="text-center mb-12">
@@ -80,7 +83,7 @@ export default function GulfTicketGamesSection() {
                     </p>
                     <div className="mt-8 flex items-center justify-center">
                         <button className="font-semibold text-[#DF911A] text-2xl hover:underline">
-                            Browse all →
+                            <Link href="https://gulfticket.com/Register"> Browse all → </Link>
                         </button>
                     </div>
                 </div>

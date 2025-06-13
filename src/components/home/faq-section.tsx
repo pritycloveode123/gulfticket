@@ -18,12 +18,22 @@ const faqs = [
         question: 'How old do you have to be to play?',
         answer:
             'You must be at least 18 years old to play Gulf Ticket.',
-    }, ,
+    },
     {
         question: 'What activities or fun are there at Gulf Ticket?',
-        answer:
-            'Gulf Ticket offers exclusive lottery games that cannot be found anywhere else, such as:',
-    }, ,
+        answer: (
+            <>
+                <p className="mb-2">
+                    Gulf Ticket offers exclusive lottery games that cannot be found anywhere else, such as:
+                </p>
+                <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                    <li><strong>Rush3</strong> gives away prizes 3 times a day.</li>
+                    <li><strong>Lucky1</strong> is easy to play, just choose 1 number.</li>
+                    <strong>Dream5</strong>, <strong>Magic5</strong>, and <strong>Super6</strong> games are designed with excitement.There are also special events such as deposit bonuses and free spins.
+                </ul>
+            </>
+        ),
+    },
     {
         question: 'How is playing the lottery with Gulf Ticket better?',
         answer:
@@ -69,11 +79,11 @@ export default function FaqSection() {
     };
 
     return (
-        <section className="bg-white py-20">
+        <section className="bg-white py-20" id="faqs">
             <div className="container mx-auto px-6 ">
                 {/* Left Side */}
                 <div>
-                    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6  text-center">
+                    <h2 className="text-3xl md:text-3xl font-bold text-[#DF911A] mb-6  text-center">
                         Frequently Asked Questions (FAQs) <br />
 
                     </h2>
@@ -103,9 +113,10 @@ export default function FaqSection() {
                                 className={`overflow-hidden transition-all duration-300 px-6 ${openIndex === index ? 'max-h-[500px] pb-5' : 'max-h-0'
                                     }`}
                             >
-                                <p className="text-gray-700 text-base leading-relaxed">
+                                <div className="text-gray-700 text-base leading-relaxed">
                                     {faq?.answer}
-                                </p>
+                                </div>
+
                             </div>
                         </div>
                     ))}

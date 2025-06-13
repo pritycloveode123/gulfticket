@@ -24,7 +24,7 @@ export default function ImageContentSection({
     const isImageLeft = imagePosition === 'left';
 
     return (
-        <div className="w-full bg-gradient-to-b from-[#f5f7fa] to-[#e4ecf3] py-12 px-6">
+        <div className="w-full bg-gradient-to-b from-[#f5f7fa] to-[#e4ecf3] py-12 px-6" id="security">
             <div
                 className={`container mx-auto flex flex-col-reverse md:flex-row ${isImageLeft ? 'md:flex-row-reverse' : ''
                     } items-stretch gap-8 min-h-[400px]`}
@@ -41,7 +41,7 @@ export default function ImageContentSection({
                     {/* Now description can be text or list */}
                     <div className="text-gray-700 mb-6 flex-grow">{description}</div>
 
-                    <div className="flex justify-end md:justify-start">
+                    <div className="flex justify-center ">
                         <DynamicButton text={buttonText} size="lg" />
                     </div>
                 </div>
