@@ -5,70 +5,25 @@ import { Plus, Minus } from 'lucide-react';
 
 const faqs = [
     {
-        question: 'Is Gulf Ticket legal in Thailand?',
+        question: ' Is GulfTicket legal for Malaysians?',
         answer:
-            'Gulf Ticket operates under international lottery standards with transparency at every stage, allowing players aged 18 and above to legally participate.',
+            'GulfTicket operates under international standards, fully licensed and insured for global operation. Malaysians aged 18+ can safely participate.',
     },
     {
-        question: 'What is the minimum amount to bet on the lottery with Gulf Ticket?',
+        question: ' What’s the minimum deposit?',
         answer:
-            'You can start playing the lottery with Gulf Ticket with just 1 baht . It gives everyone the chance to win prizes, whether they have a large or small budget, they can join in the fun with peace of mind.',
+            'Start with RM50.',
     },
     {
-        question: 'How old do you have to be to play?',
+        question: ' How fast are withdrawals?',
         answer:
-            'You must be at least 18 years old to play Gulf Ticket.',
+            'Winnings are transferred directly to Malaysian banks within 24 hours.',
     },
     {
-        question: 'What activities or fun are there at Gulf Ticket?',
-        answer: (
-            <>
-                <p className="mb-2">
-                    Gulf Ticket offers exclusive lottery games that cannot be found anywhere else, such as:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                    <li><strong>Rush3</strong> gives away prizes 3 times a day.</li>
-                    <li><strong>Lucky1</strong> is easy to play, just choose 1 number.</li>
-                    <strong>Dream5</strong>, <strong>Magic5</strong>, and <strong>Super6</strong> games are designed with excitement.There are also special events such as deposit bonuses and free spins.
-                </ul>
-            </>
-        ),
+        question: 'Can I watch live draws?',
+        answer: "Yes — all draws are live-streamed with full transparency daily.",
     },
-    {
-        question: 'How is playing the lottery with Gulf Ticket better?',
-        answer:
-            'Gulf Ticket is an online lottery platform that has developed its own games directly from the United Arab Emirates (UAE). It comes with a transparent, verifiable, fair prize draw system and also supports Thai language. The automatic deposit-withdrawal system is fast and the support team is available 24 hours a day.',
-    }, ,
-    {
-        question: 'Has anyone ever tried playing Gulf Ticket?',
-        answer:
-            'There are players from other countries in UAE and Thailand who have participated and won real prizes. You can see reviews and experiences from real users on our review page or social media.',
-    }, ,
-    {
-        question: "Which country's bank account is required for deposit?",
-        answer:
-            'Gulf Ticket supports a variety of deposit channels, including Thai banks , TrueMoney Wallet , and PromptPay , allowing players to choose a deposit method that is convenient for them, with credit balances updated within minutes.',
-    }, ,
-    {
-        question: 'What time is the lottery draw? How long do I have to wait?',
-        answer:
-            'Each game has different draw rounds, for example Rush3 will draw 3 times a day (afternoon to evening). Other games will have a draw schedule specified in the system in advance, which players can check the results immediately after the draw.',
-    }, ,
-    {
-        question: 'How do I know if I won?',
-        answer:
-            'The system will notify you in real time via SMS, LINE, and email , or you can log in to view the results in your personal dashboard.',
-    }, ,
-    {
-        question: 'How can I withdraw my winnings?',
-        answer:
-            'Prize money will be transferred in Thai Baht to your local bank account or TrueMoney Wallet within 1–3 business days.',
-    }, ,
-    {
-        question: 'Can I play Gulf Ticket from overseas?',
-        answer:
-            'Yes, you can play from abroad, but payment and language restrictions may apply depending on your country of use.',
-    },
+
 ];
 
 export default function FaqSection() {

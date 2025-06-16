@@ -19,13 +19,13 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "HOUSE", href: "#house" },
-    { label: "ABOUT US", href: "#about-us" },
-    { label: "HOW TO PLAY", href: "#how-to-play" },
-    { label: "PROMOTION", href: "#promotion" },
-    { label: "SECURE & EASY", href: "#security" },
-    { label: "DOWNLOAD", href: "#gulfticket-app" },
+    { label: "Home", href: "#house" },
+    { label: " How It Works", href: "#about-us" },
+    { label: "Live Draw", href: "#how-to-play" },
+    { label: "Winners", href: "#promotion" },
     { label: "FAQ's", href: "#faqs" },
+    { label: "Register", href: "#gulfticket-app" },
+
 
   ];
 

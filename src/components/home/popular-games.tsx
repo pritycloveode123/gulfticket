@@ -1,27 +1,27 @@
 'use client';
 
 import React from 'react';
-
+import DynamicButton from '../common/button';
 const steps = [
     {
-        title: 'Step 1: Sign up for free',
-        desc: 'Register with your mobile number and email. Quickly verify your identity with OTP code for account security.',
+        title: 'Step 1: Register Free Account',
+        desc: 'Sign up instantly with mobile number & OTP verification.',
     },
     {
-        title: 'Step 2: Choose a game to play.',
-        desc: 'View the draw table and winning rates of each game. Choose a game that suits your playing style.',
+        title: 'Step 2: Deposit Funds',
+        desc: 'Start with RM50 via trusted Malaysian payment gateways.',
     },
     {
-        title: 'Step 3: Choose your numbers',
-        desc: 'Choose your own numbers or use the Auto-Pick system.',
+        title: 'Step 3:Select Game & Lucky Numbers',
+        desc: 'Choose your favorite game and lucky numbers or auto-pick.',
     },
     {
-        title: 'Step 4: Pay securely with Thai Baht (THB).',
-        desc: 'Choose popular Thai payment channels such as TrueMoney, PromptPay, SCB and more',
+        title: 'Step 4:Watch Live Draws Daily',
+        desc: 'Transparent live draws streamed professionally every single day.',
     },
     {
-        title: 'Step 5:Watch the Live Draw & Notify Winners',
-        desc: 'The system will notify the winners via SMS, email and LINE. You can also watch the live draw on our website or YouTube.',
+        title: 'Step 5:Withdraw Winnings Instantly ',
+        desc: 'Withdraw your winnings to your Malaysian bank within 24 hours.',
     },
 ];
 
@@ -31,8 +31,9 @@ export default function GulfTicketThailand() {
             <div className=" py-12 bg-white  text-gray-800" id='how-to-play'>
                 <div className='container mx-auto px-6'>
                     <div className="text-center mb-8">
-                        <h2 className="text-2xl  font-bold text-[#DF911A] mb-4">How to play Gulf Ticket</h2>
-                        <h3 className="text-3xl sm:text-4xl font-bold text-[#DF911A] mb-4 uppercase">in Thailand</h3>
+                        <h2 className="text-2xl  font-bold text-[#DF911A] mb-4">How It Works
+                        </h2>
+                        {/* <h3 className="text-3xl sm:text-4xl font-bold text-[#DF911A] mb-4 uppercase">in Thailand</h3> */}
                     </div>
 
                     {steps.map((step, index) => (
@@ -58,7 +59,11 @@ export default function GulfTicketThailand() {
                             )}
                         </div>
                     ))}
+
                 </div>
+            </div>
+            <div className='flex flex-col items-center justify-center py-8 bg-white'>
+                <DynamicButton text="Start Playing Today" size="lg" />
             </div>
 
         </>

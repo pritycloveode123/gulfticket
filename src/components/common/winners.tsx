@@ -39,11 +39,9 @@ export default function ImageContentSection({
                     </h2>
 
                     {/* Now description can be text or list */}
-                    <div className="text-gray-700 mb-6 flex-grow">{description}</div>
+                    <div className="text-gray-700 mb-6 flex-grow">{description}  <div className='mt-6'><DynamicButton text={buttonText} size="lg" /> </div></div>
 
-                    <div className="flex justify-center ">
-                        <DynamicButton text={buttonText} size="lg" />
-                    </div>
+
                 </div>
 
                 {/* Image */}
