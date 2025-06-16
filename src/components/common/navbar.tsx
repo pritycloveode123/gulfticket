@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const [activeNav, setActiveNav] = useState<string>("HOUSE");
+  const [activeNav, setActiveNav] = useState<string>("HOME");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,22 +19,24 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#house" },
-    { label: " How It Works", href: "#about-us" },
-    { label: "Live Draw", href: "#how-to-play" },
-    { label: "Winners", href: "#promotion" },
+    { label: "Home", href: "#home" },
+
+    { label: "Live Draw", href: "#live-draws" },
+    { label: " How It Works", href: "#how-it-works" },
+    { label: "Winners", href: "#winners" },
     { label: "FAQ's", href: "#faqs" },
-    { label: "Register", href: "#gulfticket-app" },
+
 
 
   ];
 
   const mobileItems = [
-    { label: "HOUSE", href: "#house" },
-    { label: "HOW TO PLAY", href: "#how-to-play" },
-    { label: "PROMOTION", href: "#promotion" },
-    { label: "ABOUT US", href: "#about-us" },
-    { label: "PRIVACY POLICY", href: "#privacy-policy" },
+    { label: "Home", href: "#home" },
+
+    { label: "Live Draw", href: "#live-draws" },
+    { label: " How It Works", href: "#how-it-works" },
+    { label: "Winners", href: "#winners" },
+    { label: "FAQ's", href: "#faqs" },
     // { label: "SITE MAP", href: "#site-map" },
   ];
 

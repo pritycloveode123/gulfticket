@@ -14,7 +14,7 @@ const games = [
 const GamePrizeTable = () => {
     return (
         <>
-            <div className="container mx-auto px-6 py-8">
+            <div className="container mx-auto px-6 py-8" id='live-draws'>
                 <div className="text-center mb-12">
                     <h2 className="text-[#DF911A] font-bold text-2xl mb-2">Game Selection &</h2>
                     <h3 className="text-[#DF911A] font-bold text-3xl mb-6"> Prize Table
@@ -32,15 +32,15 @@ const GamePrizeTable = () => {
                         <tbody className="divide-y divide-gray-200 text-center">
                             {games.map((game, index) => (
                                 <tr key={index} >
-                                    <td className="px-6 py-3 text-gray-800 font-semibold">{game.name}</td>
-                                    <td className="px-6 py-3 text-green-600 font-semibold">{game.maxPrize}</td>
+                                    <td className="px-6 py-3 text-[#DF911A] font-bold">{game.name}</td>
+                                    <td className="px-6 py-3 text-gray-600 font-semibold">{game.maxPrize}</td>
                                     <td className="px-6 py-3 text-gray-600 font-semibold">{game.draw}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <div className='mt-6 flex justify-center'>
+                <div className='mt-12 flex justify-center'>
                     <DynamicButton text=" Play Now & Join Today’s Draw" size="lg" />
                 </div>
             </div>

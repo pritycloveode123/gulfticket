@@ -28,7 +28,7 @@ const steps = [
 export default function GulfTicketThailand() {
     return (
         <>
-            <div className=" py-12 bg-white  text-gray-800" id='how-to-play'>
+            <div className=" py-12 bg-white  text-gray-800" id='how-it-works'>
                 <div className='container mx-auto px-6'>
                     <div className="text-center mb-8">
                         <h2 className="text-2xl  font-bold text-[#DF911A] mb-4">How It Works
