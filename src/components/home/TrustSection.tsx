@@ -39,24 +39,19 @@ export default function TrustSection() {
 
                             <span>Licensed & Globally Regulated</span>
                         </li>
-                        <li className="flex items-start gap-2 text-center max-w-xl">
-                            <span className="text-[#DF911A]">•</span>
+                        <li className="flex items-start gap-2 text-center ">
                             <span>GulfTicket operates under international licensing standards.</span>
                         </li>
-                        <li className="flex items-start gap-2 text-center max-w-xl">
-                            <span className="text-[#DF911A]">•</span>
+                        <li className="flex items-start gap-2 text-center ">
                             <span>Technology system fully licensed and certified for global lottery operations.</span>
                         </li>
-                        <li className="flex items-start gap-2 text-center max-w-xl">
-                            <span className="text-[#DF911A]">•</span>
+                        <li className="flex items-start gap-2 text-center">
                             <span>Transactions regulated and insured by globally recognized insurance body.</span>
                         </li>
-                        <li className="flex items-start gap-2 text-center max-w-xl">
-                            <span className="text-[#DF911A]">•</span>
+                        <li className="flex items-start gap-2 text-center ">
                             <span>KYC verification process ensures full transparency before withdrawals.</span>
                         </li>
-                        <li className="flex items-start gap-2 text-center max-w-xl">
-                            <span className="text-[#DF911A]">•</span>
+                        <li className="flex items-start gap-2 text-center ">
                             <span>24/7 Malaysian customer service & support.</span>
                         </li>
                     </ul>
