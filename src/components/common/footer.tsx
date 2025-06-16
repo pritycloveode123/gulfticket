@@ -28,7 +28,7 @@ const Footer = () => {
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
 
             >
-              HOUSE
+              Contact Info
             </Link>
             <span className="text-gray-500">|</span>
             <Link
@@ -36,30 +36,22 @@ const Footer = () => {
 
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
             >
-              ABOUT US
+              Support Hotline
             </Link>
             <span className="text-gray-500">|</span>
             <Link
               href="#"
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
             >
-              HOW TO PLAY
+              Legal
             </Link>
             <span className="text-gray-500">|</span>
             <Link
               href="#"
               className="text-white hover:text-orange-400 transition-colors px-3 py-1"
             >
-              PROMOTION
+              Privacy
             </Link>
-            <span className="text-gray-500">|</span>
-            <Link
-              href="#"
-              className="text-white hover:text-orange-400 transition-colors px-3 py-1"
-            >
-              FAQ&apos;s
-            </Link>
-            <span className="text-gray-500">|</span>
 
           </nav>
         </div>

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Gift, UserPlus, RotateCcw, BadgePercent } from 'lucide-react';
-import DynamicButton from '../common/button';
+
 
 const steps = [
     {
@@ -26,10 +26,12 @@ const steps = [
 ];
 
 const cardData = [
-    { id: 1, title: 'Lucky1 Daily Draw', img: '/Homepage-Promo-1.jpg' },
-    { id: 2, title: 'Rach3 Daily Draw', img: '/Homepage-Promo-2.jpg' },
-    { id: 3, title: 'Dream 5 ฿ 1000000*', img: '/Homepage-Promo-3.jpg' },
-    { id: 4, title: 'Magic 5 ฿ 500000*', img: '/Homepage-Promo-4.jpg' },
+    { id: 1, title: 'Lucky 1	RM50,000', img: '/price 1.jpg' },
+    { id: 2, title: 'Rush 3	    RM80,000', img: '/price 1.jpg' },
+    { id: 3, title: 'Dream 5	RM1,150,000', img: '/price 1.jpg' },
+    { id: 4, title: 'Magic 5	RM575,000', img: '/price 1.jpg' },
+    { id: 5, title: 'Fortune 6	RM5,750,000', img: '/price 1.jpg' },
+    { id: 6, title: 'Super 5	RM115,000,000', img: '/price 1.jpg' },
 ];
 
 export default function GulfTicketRewarded() {
@@ -40,10 +42,11 @@ export default function GulfTicketRewarded() {
                 {/* Top Headings */}
                 <div className="text-center mb-12">
                     <h1 className="text-[#DF911A] text-2xl font-bold tracking-wider uppercase mb-2">
-                        Get rewarded
+                        Game Selection &
+
                     </h1>
                     <h2 className="text-[#DF911A] text-3xl font-bold uppercase">
-                        Promotions for Thai players
+                        Prize Table
                     </h2>
                 </div>
 
@@ -64,7 +67,7 @@ export default function GulfTicketRewarded() {
                 </section>
 
                 {/* Promo Cards */}
-                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {cardData.map((card) => (
                         <div
                             key={card.id}
@@ -76,14 +79,14 @@ export default function GulfTicketRewarded() {
                                     src={card.img}
                                     alt={card.title}
                                     width={949}
-                                    height={512}
-                                    className="w-full object-cover py-4"
+                                    height={212}
+                                    className="w-full h-40 object-cover "
                                 />
                             </div>
 
-                            <div className="px-4 pb-4">
+                            <div className="text-center p-4">
                                 <h3 className="text-lg font-bold text-gray-800 mb-2">{card.title}</h3>
-                                <DynamicButton text="Register" size="sm" />
+                                {/* <DynamicButton text="Register" size="sm" /> */}
                             </div>
                         </div>
                     ))}

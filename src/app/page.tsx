@@ -8,7 +8,7 @@ import GulfTicketThailand from "@/components/home/popular-games";
 import StatsBanner from "@/components/home/promotions";
 import GulfTicketRewarded from "@/components/home/rewarded";
 import GulfTicketShowcase from "@/components/home/showcase";
-
+import GamePrizeTable from "@/components/home/prizetable";
 
 
 export default function Home() {
@@ -18,11 +18,12 @@ export default function Home() {
       <GulfTicketBanner />
       <StatsBanner />
       <GulfTicketGamesSection />
+      <GamePrizeTable />
       <GulfTicketShowcase />
       <GulfTicketThailand />
       <GulfTicketRewarded />
       <ImageContentSection
-        imageSrc="/winner1.jpg"
+        imageSrc="/price 1.jpg"
         subtitle="START PLAYING TODAY!"
         title="REAL WINNERS IN THAILAND"
         description={`“I played Dream5 while waiting at Don Mueang Airport. The first time I got 10,000 baht!” – Narong, Bangkok
@@ -32,7 +33,7 @@ export default function Home() {
       />
 
       <ImageContentSection
-        imageSrc="/winner2.jpg"
+        imageSrc="/price 2.jpg"
         subtitle="KEEP YOUR ACCOUNT SECURE WITH US"
         title="SECURITY YOU CAN TRUST"
         imagePosition="left"
@@ -48,7 +49,7 @@ export default function Home() {
         }
       />
       <ImageContentSection
-        imageSrc="/winner3.png"
+        imageSrc="/price 3.jpg"
         subtitle="Download the app"
         title="Summary – A new alternative for playing the lottery for Thai people"
         description={`Gulf Ticket is revolutionizing the online lottery experience for Thai players. No more queuing or waiting in-store to buy. Just sign up and you can play immediately with secure payment system and real prizes waiting for you. 
