@@ -20,7 +20,6 @@ export default function Home() {
       <StatsBanner />
       <GulfTicketGamesSection />
       <GamePrizeTable />
-
       <GulfTicketThailand />
       <GulfTicketTestimonials />
       <TrustSection />
