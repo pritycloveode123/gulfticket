@@ -1,114 +1,54 @@
 'use client';
 
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
 import DynamicButton from '../common/button';
 
-const cardsData = [
+const testimonials = [
     {
         id: 1,
-        image: '/sexy_girl1.png',
-        text: 'DESIGNED SPECIFICALLY FOR THAI PLAYERS SUPPORTS BOTH THAI AND ENGLISH LANGUAGES, PAYS IN THAI BAHT, AND HAS A CUSTOMER SERVICE TEAM THAT TRULY UNDERSTANDS THE NEEDS AND CULTURE OF THAI USERS.',
+        text: '"I started with RM50 — won RM10,000 within my first week!"',
+        name: 'Azlan, KL',
     },
     {
         id: 2,
-        image: '/sexy_girl2.png',
-        text: 'DESIGNED SPECIFICALLY FOR THAILAND SUPPORTS BOTH THAI AND ENGLISH LANGUAGES. PAYMENTS ARE MADE IN THAI BAHT WITH A CUSTOMER SERVICE TEAM THAT TRULY UNDERSTANDS THE CULTURE AND NEEDS OF THAI USERS.',
+        text: '"Fast cashout to my Maybank account, highly trusted platform."',
+        name: 'Siti, JB',
     },
     {
         id: 3,
-        image: '/sexy_girl3.png',
-        text: 'SAFE AND SECURE GULF TICKET USES ADVANCED ENCRYPTION AND STATE-OF-THE-ART SECURITY PROTOCOLS TO PROTECT YOUR INFORMATION AND FUNDS AT EVERY STEP.',
-    },
-    {
-        id: 4,
-        image: '/sexy_girl4.png',
-        text: 'MULTIPLE GAME OPTIONS DESIGNED FOR MAXIMUM ENTERTAINMENT WITH RESPONSIBLE GAMING FEATURES BUILT-IN.',
-    },
-    {
-        id: 5,
-        image: '/sexy_girl5.png',
-        text: 'EASY TO USE PLATFORM DESIGNED FOR BOTH MOBILE AND DESKTOP EXPERIENCES.',
+        text: '"Love the daily draws, no waiting, easy to join and play."',
+        name: ' Mr. Lim, Penang',
     },
 ];
 
-export default function GulfTicketShowcase() {
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const containerRef = useRef<HTMLDivElement>(null);
-
-    const extendedCards = [
-        ...cardsData.slice(-2),
-        ...cardsData,
-        ...cardsData.slice(0, 2),
-    ];
-
-    const slideWidth = 100 / 3;
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentIndex((prev) => prev + 1);
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, []);
-
-    useEffect(() => {
-        if (currentIndex === cardsData.length + 1) {
-            setTimeout(() => {
-                if (containerRef.current) {
-                    containerRef.current.style.transition = 'none';
-                    setCurrentIndex(1);
-                }
-            }, 600);
-        } else {
-            if (containerRef.current) {
-                containerRef.current.style.transition = 'transform 0.6s ease-in-out';
-            }
-        }
-    }, [currentIndex]);
-
+export default function GulfTicketTestimonials() {
     return (
-        <div className="bg-gradient-to-b from-gray-100 to-white text-center py-12">
+        <div className="bg-gradient-to-b from-gray-100 to-white text-center py-12" id="winners">
             <h4 className="text-2xl font-semibold text-[#DF911A] mb-2">
-                REASONS WHY THAI PLAYERS TRUST GULF TICKET
+                Real Malaysian
             </h4>
             <h2 className="text-3xl font-bold text-[#DF911A] mb-10">
-                GET INSTANT HOURLY REWARDS WITH GULFTICKET
+                Winners
             </h2>
 
-            <div className="container mx-auto px-4 overflow-hidden">
-                <div className="relative w-full">
-                    <div
-                        ref={containerRef}
-                        className="flex md:w-[calc(35%*8.5/3)] w-full"
-                        style={{
-                            transform: `translateX(-${currentIndex * slideWidth}%)`,
-                        }}
-                    >
-                        {extendedCards.map((card, i) => (
-                            <div
-                                key={i}
-                                className="md:w-1/3 w-full flex-shrink-0 px-4"
-                            >
-                                <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-full min-h-[450px] relative">
-                                    <Image
-                                        src={card.image}
-                                        alt="Player"
-                                        width={160}
-                                        height={160}
-                                        className="h-40 w-40 object-cover mb-4"
-                                    />
-                                    <p className="mt-6 text-sm font-semibold text-gray-800 mb-4 px-1 text-center">
-                                        {card.text}
-                                    </p>
-                                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                                        <DynamicButton text="BUY NOW !" size="sm" />
-                                    </div>
-                                </div>
+            <div className="container mx-auto px-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    {testimonials.map((testimonial) => (
+                        <div key={testimonial.id} className="px-4">
+                            <div className="border-2 border-orange-300 rounded-lg p-6 bg-white shadow-md flex flex-col items-center h-auto  relative">
+                                <p className="mt-6 text-sm font-semibold text-gray-800 mb-4 px-1 text-center">
+                                    {testimonial.text}
+                                </p>
+                                <p className="text-[#DF911A] text-sm font-bold italic mb-16">
+                                    — {testimonial.name}
+                                </p>
+
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
+            </div>
+            <div className='pt-12'>
+                <DynamicButton text="See More Winner Stories" size="lg" />
             </div>
         </div>
     );

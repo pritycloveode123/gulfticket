@@ -7,8 +7,9 @@ import HeroCarousel from "@/components/home/hero-section";
 import GulfTicketThailand from "@/components/home/popular-games";
 import StatsBanner from "@/components/home/promotions";
 import GulfTicketRewarded from "@/components/home/rewarded";
-import GulfTicketShowcase from "@/components/home/showcase";
+import GulfTicketTestimonials from "@/components/home/showcase";
 import GamePrizeTable from "@/components/home/prizetable";
+import TrustSection from "@/components/home/TrustSection";
 
 
 export default function Home() {
@@ -19,10 +20,12 @@ export default function Home() {
       <StatsBanner />
       <GulfTicketGamesSection />
       <GamePrizeTable />
-      <GulfTicketShowcase />
+
       <GulfTicketThailand />
+      <GulfTicketTestimonials />
+      <TrustSection />
       <GulfTicketRewarded />
-      <ImageContentSection
+      {/* <ImageContentSection
         imageSrc="/price 1.jpg"
         subtitle="START PLAYING TODAY!"
         title="REAL WINNERS IN THAILAND"
@@ -30,7 +33,7 @@ export default function Home() {
         “It’s very easy to play and withdraw money conveniently. What I like the most is that it supports PromptPay.” – May, Khon Kaen`}
         buttonText="Start winning"
         imagePosition="right"
-      />
+      /> */}
 
       <ImageContentSection
         imageSrc="/price 2.jpg"
@@ -51,8 +54,8 @@ export default function Home() {
       <ImageContentSection
         imageSrc="/price 3.jpg"
         subtitle="Download the app"
-        title="Summary – A new alternative for playing the lottery for Thai people"
-        description={`Gulf Ticket is revolutionizing the online lottery experience for Thai players. No more queuing or waiting in-store to buy. Just sign up and you can play immediately with secure payment system and real prizes waiting for you. 
+        title="Summary – A new alternative for playing the lottery for  people"
+        description={`Gulf Ticket is revolutionizing the online lottery experience for  players. No more queuing or waiting in-store to buy. Just sign up and you can play immediately with secure payment system and real prizes waiting for you. 
 
 Sign up today, choose your lucky number and let Gulf Ticket Thailand be your new path to fortune!`}
         buttonText="Join us"
