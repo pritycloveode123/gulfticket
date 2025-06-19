@@ -14,7 +14,7 @@ const GulfTicketAppSection = () => {
                 <div className="flex flex-col h-full text-center px-2 sm:px-4">
                     <h3 className="text-base sm:text-xl font-bold text-[#DF911A] uppercase mb-2">Download the App</h3>
                     <h2 className="text-xl sm:text-3xl font-bold text-[#DF911A] uppercase leading-snug mb-3 sm:mb-4">
-                        Gulf Ticket Malaysia App <span className=" text-[#DF911A]">(Coming Soon)</span>
+                        Gulf Ticket Malaysia App <span className=" text-[#DF911A] text-sm">(Coming Soon)</span>
                     </h2>
                     <p className="text-gray-800 text-sm sm:text-base mb-3">
                         <span className="text-[#DF911A] font-medium">Gulf Ticket</span> mobile app designed specifically for Malaysia players is coming soon! The app will feature many great features such as:
@@ -25,9 +25,9 @@ const GulfTicketAppSection = () => {
                         <li>• Fast withdrawal to domestic bank accounts</li>
                         <li>• Fully supports Malay language, easy to use at every step.</li>
                     </ul>
-                    <div className='mt-4 sm:mt-6 flex justify-center'>
+                    {/* <div className='mt-4 sm:mt-6 flex justify-center'>
                         <DynamicButton text="Join us" size="lg" />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right Block */}
