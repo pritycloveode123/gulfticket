@@ -11,7 +11,7 @@ export default function GulfTicketBanner() {
             <div className="relative z-10 max-w-4xl w-full px-4 sm:px-6 py-6 sm:py-12 bg-white/10 backdrop-blur-md rounded-xl sm:rounded-2xl shadow-xl text-center">
                 {/* Heading */}
                 <h1 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 drop-shadow-lg">
-                    Malaysia’s #1 Daily Draw Platform - 80%-90% Winning Chance
+                    Malaysia’s #1 High-Frequency Draw Platform – 80%-90% Winning Chance
                 </h1>
 
                 {/* First paragraph */}
