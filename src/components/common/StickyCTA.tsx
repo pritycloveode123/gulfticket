@@ -2,29 +2,37 @@
 
 import React from 'react';
 import Link from 'next/link';
+import { Crown } from 'lucide-react'; // Lucide icon
 
 const StickyCTA = () => {
     return (
-        <div className="fixed bottom-0 left-0 right-0 z-50 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.1)] border-t border-gray-200">
-            <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-6">
-                <Link href="https://gulfticket.com/Register">
-                    <button
-                        className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold text-sm sm:text-base px-5 py-3 sm:px-6 sm:py-4 rounded-md shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 uppercase"
-                    >
-                        JOIN NOW & START PLAYING
-                    </button>
-                </Link>
+        <>
+            {/* Desktop/Tablet view */}
+            <div className="hidden sm:block fixed bottom-0 left-0 right-0 z-50 bg-white shadow-[0_-2px_10px_rgba(0,0,0,0.1)] border-t border-gray-200">
+                <div className="container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-6">
+                    <Link href="https://gulfticket.com/Register">
+                        <button className="w-full sm:w-auto bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-bold text-sm sm:text-base px-5 py-3 sm:px-6 sm:py-4 rounded-md shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 uppercase">
+                            JOIN NOW & START PLAYING
+                        </button>
+                    </Link>
 
+                    <Link href="https://gulfticket.com/Register">
+                        <button className="w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-bold text-sm sm:text-base px-5 py-3 sm:px-6 sm:py-4 rounded-md shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 uppercase">
+                            WATCH TODAY&apos;S LIVE DRAW
+                        </button>
+                    </Link>
+                </div>
+            </div>
+
+            {/* Mobile view: floating icon button */}
+            <div className="sm:hidden fixed bottom-4 right-4 z-50">
                 <Link href="https://gulfticket.com/Register">
-                    <button
-                        className="w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-yellow-600 hover:from-yellow-500 hover:to-yellow-700 text-white font-bold text-sm sm:text-base px-5 py-3 sm:px-6 sm:py-4 rounded-md shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 uppercase"
-                    >
-                        WATCH TODAY&apos;S LIVE DRAW
+                    <button className="bg-yellow-500 hover:bg-yellow-600 text-white p-4 rounded-full shadow-lg transition-all duration-200 transform hover:scale-110">
+                        < Crown className="w-6 h-6" />
                     </button>
                 </Link>
             </div>
-        </div>
-
+        </>
     );
 };
 
