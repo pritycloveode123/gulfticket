@@ -5,11 +5,11 @@ import DynamicButton from '@/components/common/button';
 
 const games = [
     { name: 'Lucky 1', maxPrize: 'RM50,000', draw: 'Daily' },
-    { name: 'Rush 3', maxPrize: 'RM80,000', draw: 'Daily' },
-    { name: 'Dream 5', maxPrize: 'RM1,150,000', draw: 'Daily' },
-    { name: 'Magic 5', maxPrize: 'RM575,000', draw: 'Daily' },
-    { name: 'Fortune 6', maxPrize: 'RM5,750,000', draw: 'Daily' },
-    { name: 'Super 5', maxPrize: 'RM115,000,000', draw: 'Daily' },
+    { name: 'Rush 3', maxPrize: 'RM80,000', draw: 'Every 3 hours' },
+    { name: 'Dream 5', maxPrize: 'RM1,150,000', draw: 'Weekly' },
+    { name: 'Magic 5', maxPrize: 'RM575,000', draw: 'Weekly' },
+    { name: 'Fortune 6', maxPrize: 'RM5,750,000', draw: 'Weekly' },
+
 ];
 
 const GamePrizeTable = () => {
