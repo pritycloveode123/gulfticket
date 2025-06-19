@@ -28,44 +28,41 @@ const steps = [
 export default function GulfTicketThailand() {
     return (
         <>
-            <div className=" py-12 bg-white  text-gray-800" id='how-it-works'>
-                <div className='container mx-auto px-6'>
-                    <div className="text-center mb-8">
-                        <h2 className="text-2xl  font-bold text-[#DF911A] mb-4">How It Works
-                        </h2>
-                        {/* <h3 className="text-3xl sm:text-4xl font-bold text-[#DF911A] mb-4 uppercase">in Thailand</h3> */}
+            <div className="py-2 sm:py-12 bg-white text-gray-800" id="how-it-works">
+                <div className="container mx-auto px-4 sm:px-6">
+                    <div className="text-center mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-bold text-[#DF911A] mb-3 sm:mb-4">How It Works</h2>
                     </div>
 
                     {steps.map((step, index) => (
-                        <div key={index} className="relative flex flex-col items-center text-center">
-                            {/* Circle with Step Number */}
+                        <div key={index} className="relative flex flex-col items-center text-center mb-6 sm:mb-8">
+                            {/* Step Number Circle */}
                             <div className="z-10 w-10 h-10 flex items-center justify-center rounded-full bg-[#DF911A] text-white font-bold shadow">
                                 {index + 1}
                             </div>
 
                             {/* Step Content */}
-                            <div className="mt-3 mb-4">
-                                <h3 className="text-lg sm:text-xl font-semibold text-black">{step.title}</h3>
+                            <div className="mt-2 sm:mt-3 mb-2 sm:mb-4 px-2">
+                                <h3 className="text-base sm:text-lg font-semibold text-black">{step.title}</h3>
                                 <p className="text-sm sm:text-base text-gray-600 mt-1">{step.desc}</p>
                             </div>
 
                             {/* Vertical Line */}
                             {index !== steps.length - 1 && (
                                 <>
-                                    <div className="w-px h-6 bg-gray-400" />
-                                    {/* <div className="w-full border-t border-dashed border-gray-300 my-4" /> */}
-                                    <div className="w-px h-6 bg-gray-400" />
+                                    <div className="w-px h-4 sm:h-6 bg-gray-400" />
+                                    <div className="w-px h-4 sm:h-6 bg-gray-400" />
                                 </>
                             )}
                         </div>
                     ))}
-
                 </div>
             </div>
-            <div className='flex flex-col items-center justify-center py-8 bg-white'>
+
+            <div className="flex flex-col items-center justify-center py-6 sm:py-8 bg-white">
                 <DynamicButton text="Start Playing Today" size="lg" />
             </div>
-
         </>
+
     );
 }
