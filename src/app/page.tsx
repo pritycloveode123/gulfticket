@@ -46,7 +46,7 @@ export default function Home() {
             <li>Two-Factor Authentication (2FA)</li>
             <li>Real-time risk monitoring and fraud prevention</li>
             <li>KYC system to verify identity before withdrawing money</li>
-            <li>Support team in both Thai and English are ready to help you</li>
+            <li>Support team in both Malay and English are ready to help you</li>
           </ul>
         }
       />
@@ -56,7 +56,7 @@ export default function Home() {
         title="Summary – A new alternative for playing the lottery for  people"
         description={`Gulf Ticket is revolutionizing the online lottery experience for  players. No more queuing or waiting in-store to buy. Just sign up and you can play immediately with secure payment system and real prizes waiting for you. 
 
-Sign up today, choose your lucky number and let Gulf Ticket Thailand be your new path to fortune!`}
+Sign up today, choose your lucky number and let Gulf Ticket Malaysia be your new path to fortune!`}
         buttonText="Join us"
         imagePosition="right"
       />
