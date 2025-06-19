@@ -57,11 +57,12 @@ export default function GulfTicketThailand() {
                         </div>
                     ))}
                 </div>
+                <div className="flex flex-col items-center justify-center  bg-white">
+                    <DynamicButton text="Start Playing Today" size="lg" />
+                </div>
             </div>
 
-            <div className="flex flex-col items-center justify-center py-6 sm:py-8 bg-white">
-                <DynamicButton text="Start Playing Today" size="lg" />
-            </div>
+
         </>
 
     );
