@@ -32,19 +32,24 @@ const GulfTicketAppSection = () => {
 
                 {/* Right Block */}
                 <div className="flex flex-col h-full text-center px-2 sm:px-4">
-                    <h3 className="text-base sm:text-xl font-bold text-[#DF911A] uppercase mb-2">Download the App</h3>
+                    <h3 className="text-base sm:text-xl font-bold text-[#DF911A] uppercase mb-2">
+                        Download the App
+                    </h3>
                     <h2 className="text-xl sm:text-3xl font-bold text-[#DF911A] uppercase leading-snug mb-3 sm:mb-4">
                         Contact & Malaysian Support
                     </h2>
-                    <ul className="text-gray-900 text-sm sm:text-base space-y-2 flex-grow">
-                        <li>• Email: support@gulfticket.com.my</li>
-                        <li>• Malaysian Hotline: +60 X XXX XXXX</li>
-                        <li>• Live Chat / WhatsApp: 9AM–9PM Daily</li>
-                    </ul>
-                    <div className='mt-4 sm:mt-6 flex justify-center'>
-                        <DynamicButton text="Join us" size="lg" />
+
+                    <div className="text-gray-900 text-sm sm:text-base flex-grow">
+                        <p className="mb-2">Need help?</p>
+                        <p className="font-medium py-2">Chat with our live support team.</p>
+                        <p className="text-gray-600">Available 9AM – 9PM daily</p>
+                    </div>
+
+                    <div className="mt-4 sm:mt-6 flex justify-center">
+                        <DynamicButton text="Chat Now" size="lg" />
                     </div>
                 </div>
+
             </div>
         </div>
 
