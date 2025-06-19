@@ -21,8 +21,8 @@ export default function GulfTicketBanner() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
-                    {/* <DynamicButton text="REGISTER NOW" size="lg" /> */}
-                    <DynamicButton text="WATCH LIVE DRAW" size="lg" />
+                    <DynamicButton text="REGISTER NOW" size="lg" />
+                    {/* <DynamicButton text="WATCH LIVE DRAW" size="lg" /> */}
                 </div>
             </div>
         </div>
