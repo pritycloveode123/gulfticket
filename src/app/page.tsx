@@ -10,6 +10,7 @@ import GulfTicketRewarded from "@/components/home/rewarded";
 import GulfTicketTestimonials from "@/components/home/showcase";
 import GamePrizeTable from "@/components/home/prizetable";
 import TrustSection from "@/components/home/TrustSection";
+import VideosTesti from "@/components/home/vedios-section";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
     <>
       <HeroCarousel />
       <GulfTicketBanner />
+      <VideosTesti />
       <StatsBanner />
       <GulfTicketGamesSection />
       <GamePrizeTable />
