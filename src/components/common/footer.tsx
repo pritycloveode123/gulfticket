@@ -1,9 +1,9 @@
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-black">
+    <footer className="bg-black pb-36 sm:pb-20"> {/* 👈 Mobile ke liye extra space */}
       {/* Main Footer Content */}
       <div className="py-6 sm:py-8 flex flex-col items-center justify-center">
         {/* Logo Section */}
@@ -23,19 +23,31 @@ const Footer = () => {
         {/* Navigation Links */}
         <div className="w-full flex justify-center">
           <nav className="flex flex-wrap justify-center items-center gap-2 sm:gap-4 text-sm text-center">
-            <Link href="/" className="text-white hover:text-orange-400 transition-colors px-2 py-1">
+            <Link
+              href="/"
+              className="text-white hover:text-orange-400 transition-colors px-2 py-1"
+            >
               Contact Info
             </Link>
             <span className="text-gray-500 hidden sm:inline">|</span>
-            <Link href="#" className="text-white hover:text-orange-400 transition-colors px-2 py-1">
+            <Link
+              href="#"
+              className="text-white hover:text-orange-400 transition-colors px-2 py-1"
+            >
               Support Hotline
             </Link>
             <span className="text-gray-500 hidden sm:inline">|</span>
-            <Link href="#" className="text-white hover:text-orange-400 transition-colors px-2 py-1">
+            <Link
+              href="#"
+              className="text-white hover:text-orange-400 transition-colors px-2 py-1"
+            >
               Legal
             </Link>
             <span className="text-gray-500 hidden sm:inline">|</span>
-            <Link href="#" className="text-white hover:text-orange-400 transition-colors px-2 py-1">
+            <Link
+              href="#"
+              className="text-white hover:text-orange-400 transition-colors px-2 py-1"
+            >
               Privacy
             </Link>
           </nav>
@@ -52,7 +64,6 @@ const Footer = () => {
         </p>
       </div>
     </footer>
-
   );
 };
 
