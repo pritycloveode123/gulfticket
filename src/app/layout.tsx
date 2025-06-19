@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Gulf Ticket",
-  description: "Gulf Ticket - Your Gateway to Online Lottery in Thailand",
+  description: "Gulf Ticket - Your Gateway to Online Lottery in Malaysia ",
 };
 
 export default function RootLayout({

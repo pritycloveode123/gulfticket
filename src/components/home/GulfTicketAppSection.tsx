@@ -14,17 +14,17 @@ const GulfTicketAppSection = () => {
                 <div className="flex flex-col h-full text-center px-4">
                     <h3 className="text-xl font-bold text-[#DF911A] uppercase mb-2">Download the App</h3>
                     <h2 className="text-3xl font-bold text-[#DF911A] uppercase leading-snug mb-4">
-                        Gulf Ticket Thailand App <span className=" text-[#DF911A]">(Coming Soon)</span>
+                        Gulf Ticket Malaysia App <span className=" text-[#DF911A]">(Coming Soon)</span>
                     </h2>
                     <p className="text-gray-800 mb-4">
                         <span className="text-[#DF911A] font-medium">Gulf Ticket</span> mobile app designed
-                        specifically for Thai players is coming soon! The app will feature many great features such as:
+                        specifically for Malaysia players is coming soon! The app will feature many great features such as:
                     </p>
                     <ul className="text-gray-900 space-y-1 flex-grow">
                         <li>• Push Notification of Lottery Results</li>
                         <li>• Buy lottery easily</li>
                         <li>• Fast withdrawal to domestic bank accounts</li>
-                        <li>• Fully supports Thai language, easy to use at every step.</li>
+                        <li>• Fully supports Malay language, easy to use at every step.</li>
                     </ul>
                     <div className='mt-6 flex justify-center'>
                         <DynamicButton text="Join us" size="lg" />
