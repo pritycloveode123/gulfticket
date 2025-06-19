@@ -34,18 +34,17 @@ export default function FaqSection() {
     };
 
     return (
-        <section className="bg-white py-20" id="faqs">
-            <div className="container mx-auto px-6 ">
-                {/* Left Side */}
+        <section className="bg-white py-10 sm:py-20" id="faqs">
+            <div className="container mx-auto px-4 sm:px-6">
+                {/* Heading */}
                 <div>
-                    <h2 className="text-3xl md:text-3xl font-bold text-[#DF911A] mb-6  text-center">
-                        Frequently Asked Questions (FAQs) <br />
-
+                    <h2 className="text-2xl sm:text-3xl font-bold text-[#DF911A] mb-6 text-center">
+                        Frequently Asked Questions (FAQs)
                     </h2>
                 </div>
 
-
-                <div className="space-y-6">
+                {/* Accordion */}
+                <div className="space-y-4 sm:space-y-6">
                     {faqs.map((faq, index) => (
                         <div
                             key={index}
@@ -53,30 +52,31 @@ export default function FaqSection() {
                         >
                             <button
                                 onClick={() => toggle(index)}
-                                className="flex items-center justify-between w-full px-6 py-5 text-left"
+                                className="flex items-center justify-between w-full px-4 sm:px-6 py-4 sm:py-5 text-left"
                             >
-                                <h3 className="text-lg font-semibold text-gray-900">
+                                <h3 className="text-base sm:text-lg font-semibold text-gray-900">
                                     Q. {faq?.question}
                                 </h3>
                                 {openIndex === index ? (
-                                    <Minus className="text-black w-5 h-5" />
+                                    <Minus className="text-black w-4 h-4 sm:w-5 sm:h-5" />
                                 ) : (
-                                    <Plus className="text-black w-5 h-5" />
+                                    <Plus className="text-black w-4 h-4 sm:w-5 sm:h-5" />
                                 )}
                             </button>
+
                             <div
-                                className={`overflow-hidden transition-all duration-300 px-6 ${openIndex === index ? 'max-h-[500px] pb-5' : 'max-h-0'
+                                className={`overflow-hidden transition-all duration-300 px-4 sm:px-6 ${openIndex === index ? 'max-h-[500px] pb-4 sm:pb-5' : 'max-h-0'
                                     }`}
                             >
-                                <div className="text-gray-700 text-base leading-relaxed">
+                                <div className="text-gray-700 text-sm sm:text-base leading-relaxed">
                                     {faq?.answer}
                                 </div>
-
                             </div>
                         </div>
                     ))}
                 </div>
             </div>
         </section>
+
     );
 }

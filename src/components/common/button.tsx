@@ -20,14 +20,16 @@ const DynamicButton: React.FC<DynamicButtonProps> = ({ text, size = 'md' }) => {
         <Link
             href="https://gulfticket.com/Register"
             className={clsx(
-                'inline-block font-bold text-white rounded-md shadow-md transition-all duration-300 text-center',
+                'inline-block font-bold text-white rounded-md shadow-md transition-all duration-300 text-center uppercase',
                 sizeClasses[size],
+                'w-full sm:w-auto',
                 'bg-gradient-to-b from-[#FFD600] to-[#E99F00] hover:from-[#E99F00] hover:to-[#FFD600]'
             )}
         >
             {text}
         </Link>
     );
+
 };
 
 export default DynamicButton;
